@@ -31,12 +31,12 @@ export async function GET(request: NextRequest) {
   const percentage = Math.round((daysPassed / totalDays) * 100)
 
   // Calculate grid dimensions
-  const columns = 13
+  const columns = 15
   const rows = Math.ceil(totalDays / columns)
 
   // Dot styling
-  const dotSize = Math.min(width / (columns * 2.5), 32)
-  const gap = dotSize * 0.6
+  const dotSize = Math.min(width / (columns * 2.2), 38)
+  const gap = dotSize * 0.5
 
   // Colors
   const bgColor = '#1a1a1a'
@@ -90,9 +90,9 @@ export async function GET(request: NextRequest) {
         <div
           style={{
             color: quoteColor,
-            fontSize: dotSize * 1.4,
-            marginBottom: dotSize * 0.6,
-            letterSpacing: '0.1em',
+            fontSize: dotSize * 1.5,
+            marginBottom: dotSize * 0.5,
+            letterSpacing: '0.12em',
           }}
         >
           {quote.toUpperCase()}
@@ -102,9 +102,9 @@ export async function GET(request: NextRequest) {
         <div
           style={{
             color: textColor,
-            fontSize: dotSize * 1.6,
-            marginBottom: dotSize * 1.5,
-            letterSpacing: '0.05em',
+            fontSize: dotSize * 1.8,
+            marginBottom: dotSize * 1.2,
+            letterSpacing: '0.06em',
           }}
         >
           {goal.toUpperCase()}
@@ -162,9 +162,9 @@ export async function GET(request: NextRequest) {
           style={{
             display: 'flex',
             alignItems: 'center',
-            marginTop: dotSize * 1.5,
-            fontSize: dotSize * 1.1,
-            letterSpacing: '0.08em',
+            marginTop: dotSize * 1.2,
+            fontSize: dotSize * 1.2,
+            letterSpacing: '0.1em',
           }}
         >
           <span style={{ color: quoteColor }}>{daysLeft} DAYS LEFT</span>
