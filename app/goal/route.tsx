@@ -26,7 +26,7 @@ export async function GET(request: NextRequest) {
   today.setHours(0, 0, 0, 0)
 
   const totalDays = Math.ceil((goalDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1
-  const daysPassed = Math.max(0, Math.ceil((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)))
+  const daysPassed = Math.max(0, Math.floor((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1)
   const daysLeft = Math.max(0, totalDays - daysPassed)
   const percentage = Math.round((daysPassed / totalDays) * 100)
 
