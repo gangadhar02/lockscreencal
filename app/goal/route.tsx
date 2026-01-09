@@ -80,6 +80,7 @@ export async function GET(request: NextRequest) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
+          paddingTop: height * 0.08,
           backgroundColor: bgColor,
           fontFamily: 'Bebas Neue',
           textTransform: 'uppercase',
