@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
   const textColor = '#888888'
 
   // Generate dots
-  const dots = []
+  const dots: { x: number; y: number; color: string }[] = []
   for (let i = 0; i < totalDays; i++) {
     const row = Math.floor(i / columns)
     const col = i % columns
